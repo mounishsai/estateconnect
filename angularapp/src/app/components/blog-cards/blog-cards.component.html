@@ -1,0 +1,55 @@
+<!-- <div class="blog-page-header">
+    <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">Blogs</h1>
+    <br>
+  </div>
+  
+  <div class="blog-list">
+    <div *ngFor="let blog of blogs" class="blog-card" (click)="goToBlogDetail(blog.id)">
+      <div class="image-container">
+        <span class="blog-date">{{ blog.date }}</span>
+        <img [src]="blog.imagePath" alt="Img" class="blog-image" />
+      </div>
+      <div class="blog-content">
+        <div><strong>{{ blog.title }}</strong></div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="blog-page-header">
+    <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">Blogs</h1>
+    <br>
+  </div>
+  
+  <div class="blog-list">
+    <div *ngFor="let blog of blogs" class="blog-card" (click)="goToBlogDetail(blog.id)">
+      <div class="image-container">
+        <span class="blog-date">{{ blog.date }}</span>
+        <img [src]="blog.imagePath" alt="Img" class="blog-image" />
+      </div>
+      <div class="blog-content">
+        <div><strong>{{ blog.title }}</strong></div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="blog-page-header">
+    <h1 style="font-size: 1.7rem; font-weight: bold; margin-bottom: 0.5rem;">Real Estate Articles</h1>
+    <br>
+  </div>
+  
+  <div class="blog-list">
+    <div *ngFor="let blog of blogs" class="blog-card" (click)="goToBlogDetail(blog.id)">
+      <div class="image-container">
+        <span class="blog-date">{{ blog.date }}</span>
+        <img [src]="blog.imagePath" alt="Img" class="blog-image" />
+      </div>
+      <div class="blog-content">
+        <div><strong>{{ blog.title }}</strong></div>
+      </div>
+    </div>
+        <!-- Read More Button -->
+        <div class="read-more-container">
+          <button class="read-more-button" (click)="goToBlogPage()">Read More</button>
+        </div>
+  </div>
+  

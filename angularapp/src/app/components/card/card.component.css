@@ -1,0 +1,130 @@
+.project-page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  }
+  
+  .project-page-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #FF7F50; /* Coral color for heading */
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project-card {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-card:hover::after {
+    background-color: rgba(255, 111, 97, 0.4); /* Coral overlay on hover */
+  }
+  
+  .project-card:hover {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 15px;
+  }
+  
+  .project-content p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* Popup overlay styling */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup box styling */
+  .popup-box {
+    background-color: white;
+    border: 2px solid #FF7F50;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    max-width: 400px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  /* Popup text */
+  .popup-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* Popup buttons */
+  .popup-buttons button {
+    background-color: #FF7F50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #e7664b;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-card {
+      width: 100%;
+    }
+  }

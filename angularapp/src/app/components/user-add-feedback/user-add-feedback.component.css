@@ -1,0 +1,82 @@
+/* submit-feedback-themed.css */
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF7F50;
+    font-size: 28px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    margin-bottom: 20px;
+}
+
+.group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.group input[type="date"],
+.group select,
+.group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.group textarea {
+    resize: vertical;
+}
+
+.group input:focus,
+.group select:focus,
+.group textarea:focus {
+    border-color: #FF7F50;
+    outline: none;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.button {
+    text-align: center;
+}
+
+.button button {
+    background-color: #FF7F50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #E6735C;
+}

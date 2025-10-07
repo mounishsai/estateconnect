@@ -1,0 +1,43 @@
+<div class="container">
+<div class="content" >
+<form (ngSubmit)="submitInquiry()">
+  <div class="heading">
+    <h2>Submit Your Inquiry</h2>
+    </div>
+  <!-- <label>Property:</label>
+  <input type="text" name="property" [(ngModel)]="inquiry.property.title" required placeholder="Enter property"> -->
+  <div class="group">
+    <label>Message:</label>
+    <textarea name="message" id="message" cols="30" rows="10" [(ngModel)]="inquiry.message" required  #messageField="ngModel"></textarea>
+    
+   <div *ngIf="messageField.invalid && messageField.touched" class="error">
+      Message is required.
+   </div>
+
+  </div>
+  
+  <!-- <input type="text" name="message" [(ngModel)]="inquiry.message" required> -->
+
+  <!-- <label>Priority:</label>
+  <input type="text" name="priority" [(ngModel)]="inquiry.priority" required> -->
+    <div class="button">
+      <button type="submit">Submit Inquiry</button>
+    </div>
+</form>
+</div>
+</div>
+<!-- Success Popup -->
+<!-- <div *ngIf="showSuccessPopup" class="success-popup">
+  <p>Inquiry submitted successfully!</p>
+  <button (click)="redirectToProperties()">OK</button>
+</div> -->
+
+<div *ngIf="showSuccessPopup" class="popup-overlay">
+  <div class="popup-box">
+    <p>Inquiry submitted successfully!</p>
+    <div class="popup-buttons">
+      <button (click)="redirectToProperties()">OK</button>
+    </div>
+  </div>
+</div>
+

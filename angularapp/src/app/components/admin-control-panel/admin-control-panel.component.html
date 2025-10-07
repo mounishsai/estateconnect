@@ -1,0 +1,175 @@
+<div class="container">
+    <h2>Admin Control Panel</h2>
+
+    <div class="cards">
+        <div class="card1" (click)="onFeedback()" >
+            <p>Total Feedbacks</p>
+            <p>{{feedbacks.length}}</p>
+        </div>
+        
+        <div class="card2" (click)="onInquiry()" >
+            <p>Total Inquiries</p>
+            <p>{{inquiries.length}}</p>
+        </div>
+        
+        <div class="card3" (click)="scrollToSection()" >
+            <p>Total Properties</p>
+            <p>{{properties.length}}</p>
+        </div>
+        
+        <div class="card4" (click)="onUnresolvedInquiry()" >
+            <p>Unresolved Inquiries</p>
+            <p>{{getUnresolvedInquiries()}}</p>
+        </div>
+        
+        <div class="card5"(click)="onTours()" >
+            <p>Scheduled Tours by Cutomers</p>
+            <p>{{scheduledTours.length}}</p>
+        </div>
+    </div>
+
+
+    <h1>Detailed Information</h1>
+    <p class="properties" >Properties</p>
+
+    <div class="searchANDsort">
+        <label for="search">Search Property:</label>
+        <input type="text" name="search" id="search" [(ngModel)]="searchText" (input)="searchBy()" placeholder="Enter data to search...">
+
+        <label for="filter">Filter By Price:</label>
+        <select name="filter" id="filter" [(ngModel)]="toggleSort" (change)="toggle()" >
+            <option value="lowToHigh">Low To High</option>
+            <option value="HighToLow">High To Low</option>
+        </select>
+    </div>
+
+    <table id="target-section">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let property of properties" >
+                <td>{{property.title}}</td>
+                <td>{{property.location}}</td>
+                <td>₹{{property.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="pop-ups">
+    <div class="popup-overlay" *ngIf="isFeedback">
+        <div class="popup-box" >
+            <h3 class="headingCard" >Feedbacks you have till now</h3>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Feedback</th>
+                        <th>Posted Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feedback of feedbacks">
+                        <td>{{feedback.user?.username}}</td>
+                        <td>{{feedback.feedbackText}}</td>
+                        <td>{{feedback.date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="popup-buttons">
+                <button (click)="seeDetails()" >See details here</button>
+                <button (click)="offFeedback()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" *ngIf="isInquiries">
+        <div class="popup-box" >
+            <h3 class="headingCard" >Inquiries you have till now</h3>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Property</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let inquiry of inquiries">
+                        <td>{{inquiry.user?.username}}</td>
+                        <td>{{inquiry.property.title}}</td>
+                        <td>{{inquiry.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="popup-buttons">
+                <button [routerLink]="['/admin/inquiries']">See details here</button>
+                <button (click)="offInquiry()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" *ngIf="isUnresolvedInquiries">
+        <div class="popup-box" >
+            <h3 class="headingCard" >Unresolved inquiries you have till now</h3>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Property</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let inquiry of unresolvedInquiries">
+                        <td>{{inquiry.user?.username}}</td>
+                        <td>{{inquiry.property.title}}</td>
+                        <td>{{inquiry.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="popup-buttons">
+                <button (click)="resolveInquiries()" >See details here</button>
+                <button (click)="offUnresolvedInquiry()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" *ngIf="isTours">
+        <div class="popup-box" >
+            <h3 class="headingCard" >Scheduled Tours by Customer</h3>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>Property</th>
+                        <th>User Name</th>
+                        <th>User Contact</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tour of scheduledTours">
+                        <td>{{tour.property.title}}</td>
+                        <td>{{tour.name}}</td>
+                        <td>{{tour.phone}}</td>
+                        <td>{{tour.tourDate}}</td>
+                        <td>{{tour.tourTime}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="popup-buttons">
+                <button (click)="offTours()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+</script>

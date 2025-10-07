@@ -1,0 +1,26 @@
+<div class="container">
+    <nav>
+        <div class="title" (click)="homeNavigate()">
+            EstateConnect
+        </div>
+        <div class="buttons">
+            <button>{{role | titlecase}} / {{username}}</button>
+            <!-- <button [routerLink]="['/home']">Home</button> -->
+            <button [routerLink]="['/admin/controlPanel']">Control Panel</button>
+            <button [routerLink]="['/admin/viewProp']">View Properties</button>
+            <button [routerLink]="['/admin/addProperty']" >Add Property</button>
+            <button [routerLink]="['/admin/inquiries']">Inquiries</button>
+            <button [routerLink]="['/admin/feedback']">Feedback</button>
+            <button (click)="onLogout()">LogOut</button>
+        </div>
+    </nav>
+    <div class="popup-overlay" *ngIf="confirmLogout">
+        <div class="popup-box" >
+            <h3>Are you sure you want to logout?</h3>
+            <div class="popup-buttons">
+                <button (click)="logout()">Logout</button>
+                <button (click)="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

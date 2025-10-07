@@ -1,0 +1,119 @@
+  /* .agent-tab {
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .agent-tab h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  select {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .search-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-button {
+    background-color: white;
+    color: #FF7F50;
+    border: 1.5px solid #FF7F50;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #FF7F50;
+    color: white;
+  }
+  
+  .agents-list {
+    margin-top: 20px;
+  }
+  
+  .agent-card {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  } */
+
+
+  .agent-tab {
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .agent-tab h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  select {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .search-button,
+  .cancel-button {
+    background-color: white;
+    color: #FF7F50;
+    border: 1.5px solid #FF7F50;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #FF7F50;
+    color: white;
+  }
+  
+  .cancel-button:hover {
+    background-color: #FF7F50;
+    color: white;
+  }
+  
+  .agents-list {
+    margin-top: 20px;
+  }
+  
+  .agent-card {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }

@@ -1,0 +1,673 @@
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Box */
+.popup-box {
+  background-color: white;
+  border: 2px solid #FF7F50;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  max-width: 400px;
+  width: 90%;
+  height: 85%;
+}
+
+.popup-box textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inquiry-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content {
+  background-color: white;
+  border: 2px solid #FF7F50;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  max-width: 400px;
+  width: 90%;
+  height: 65%;
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.group input[type="date"],
+.group select,
+.group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.group textarea {
+  resize: vertical;
+}
+
+.group input:focus,
+.group select:focus,
+.group textarea:focus {
+  border-color: #FF7F50;
+  outline: none;
+}
+
+.inquiry-buttons {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.inquiry-buttons button {
+  background-color: #FF7F50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inquiry-buttons button:hover {
+  background-color: #E6735C;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+#message{
+  margin-top: 20px;
+}
+
+.popup-box h2 {
+  color: #FF7F50;
+  margin-bottom: 20px;
+}
+
+/* Date Options */
+.date-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.date-options button {
+  background-color: #fff;
+  border: 2px solid #d1c8c8;
+  color: black;
+  padding: 40px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.date-options button.selected,
+.date-options button:hover {
+  background-color: #FF7F50;
+  color: white;
+}
+
+/* Form Inputs */
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Popup Buttons */
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-buttons button {
+  background-color: #FF7F50;
+  color: white;
+  border: 1px solid #d1c8c8;
+  padding: 10px 61px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-buttons button:hover {
+  background-color: #E6735C;
+}
+
+.cancel-button {
+  background-color: #fff;
+  color: #FF7F50;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#backButton {
+  background-color: white;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+}
+
+#backButton:hover {
+  background-color: #FF7F50;
+  color: white;
+}
+
+/* Property Image */
+.container i1 {
+  width: 50%; /* half the original width */
+  height: 40%; /* half the original height */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Below Image Layout */
+.belowImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Description Layout */
+.detail-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Left Column */
+.one {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Middle Column */
+.two {
+  flex: 1;
+}
+
+.two ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* Right Column - Buttons */
+/* Buttons Container with Border */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #ccc; /* Light grey border */
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  align-self: flex-start; /* Prevents stretching to parent width */
+  width: fit-content; /* Shrinks to fit content */
+}
+
+/* Uniform Button Size */
+.buttons button {
+  background-color: white;
+  color: black;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Fixed width for uniformity */
+  text-align: center;
+}
+
+#schedulebtn{
+  background-color: #FF7F50;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Fixed width for uniformity */
+  text-align: center;
+}
+
+#schedulebtn:hover{
+  background-color: #E6735C; /* Changes to dark coral on hover */
+}
+
+.buttons button:hover {
+  background-color: #E6735C;
+  color: white;
+}
+
+/* Details Section */
+.details {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Text Styling */
+.detail-description h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.detail-description p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* List Styling */
+.detail-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-description ul li {
+  /* padding: 0.3rem 0; */
+  font-size: 0.95rem;
+  color: grey;
+}
+
+.homeHighlights {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Headline */
+.homeHighlights > p {
+  font-weight: bold;
+  /* margin-bottom: 0.5rem; */
+  color: #333;
+}
+
+/* Child sections as horizontal rows */
+.homeHighlights .h1,
+.homeHighlights .h2,
+.homeHighlights .h3 {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+/* Each item as a horizontal row */
+.homeHighlights li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #555;
+  /* padding: 0.3rem 0; */
+  min-width: 280px;
+}
+
+/* Label and value styling */
+.homeHighlights li p {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup box for images */
+.image-box {
+  background-color: white;
+  border: 2px solid #FF7F50; /* coral border */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.image-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FF7F50; /* coral */
+}
+
+/* Image grid */
+.image-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two images per row */
+  gap: 15px;
+  width: 100%;
+}
+
+/* Individual images */
+.image-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Square format */
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #FF7F50;
+  transition: transform 0.3s ease;
+}
+
+.image-images img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Close button */
+.image-buttons button {
+  background-color: #FF7F50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.image-buttons button:hover {
+  background-color: #e65c50;
+}
+
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  padding-left: 10px;
+}
+.carousel-track img {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+.floatBtns {
+  position: absolute;
+  top: 115px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.floatBtns .left {
+  margin-left: 145px;
+}
+
+.floatBtns .right {
+  margin-right: 135px;
+  display: flex;
+  gap: 10px; /* spacing between buttons */
+}
+
+.floatBtns .right button {
+  background-color: white;
+  color: black;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 170px; /* Fixed width for uniformity */
+  text-align: center;
+}
+
+.floatBtns .right button:hover {
+  background-color: coral;
+  color: white;
+}
+
+/* Zoom Overlay */
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoom-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+
+.zoom-box img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.arrow.left {
+  left: -50px;
+}
+.arrow.left:hover {
+  left: -50px;
+  color: coral;
+}
+
+.arrow.right {
+  right: -50px;
+}
+.arrow.right:hover {
+  right: -50px;
+  color: coral;
+}
+
+.close-btn {
+  margin-top: 20px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover{
+  color: coral;
+}
+
+.description {
+  margin-top: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.description .label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.description .text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  background-color: #f9f9f9;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+
+#buybtn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Popup Overlay */
+.buy-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Box */
+.buy-popup-box {
+  background-color: white;
+  border: 2px solid #FF7F50;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  max-width: 400px;
+  width: 90%;
+  height: 50%;
+}

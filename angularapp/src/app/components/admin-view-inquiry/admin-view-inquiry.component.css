@@ -1,0 +1,232 @@
+h1 {
+  color: #FF7F50;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container input[type="text"],
+.container select {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #FF7F50;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container select:focus {
+  border-color: #E6735C;
+}
+
+.container-table {
+  overflow-x: auto;
+  margin-top: 30px;
+  border:1px solid #FF7F50;
+}
+
+.container-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  /* border-radius: 13px; */
+  overflow: hidden;
+}
+
+.container-table th,
+.container-table td {
+  padding: 16px 16px;
+  text-align: left;
+  border-bottom: 1px solid #FF7F50;
+  /* border-bottom: 1px solid #ddd; */
+  font-size: 15px;
+  color: #000000;
+}
+
+.container-table th {
+  background-color: #FF7F50;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.container-table tr:hover {
+  background-color: #fff0e6;
+}
+
+.container-table select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #FF7F50;
+  background-color: #fff;
+  font-size: 13px;
+}
+
+.container-table button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-table button:first-child {
+  background-color: #FF7F50;
+  color: #ffffff;
+}
+
+.container-table button:last-child {
+  background-color: #ffffff;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+}
+
+.container-table button:hover {
+  background-color: #E6735C;
+  color: #ffffff;
+}
+
+/* Modal Styles */
+
+/* .add-response,
+.confirm-delete {
+  background-color: #ffffff;
+  border: 2px solid #FF7F50;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.add-response h3 {
+  color: #FF7F50;
+  margin-bottom: 15px;
+}
+
+.add-response input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #FF7F50;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-response button,
+.confirm-delete button {
+  margin: 10px 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-response button:first-child,
+.confirm-delete button:first-child {
+  background-color: #FF7F50;
+  color: #ffffff;
+}
+
+.add-response button:last-child,
+.confirm-delete button:last-child {
+  background-color: #ffffff;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+}
+
+.add-response button:hover,
+.confirm-delete button:hover {
+  background-color: #E6735C;
+  color: #ffffff;
+} */
+
+
+/* Overlay background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup box */
+.popup-box {
+  background-color: white;
+  border: 2px solid #FF7F50;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Heading and text */
+.popup-box h3 {
+  margin-bottom: 15px;
+  color: #FF7F50;
+}
+
+/* Buttons */
+.popup-buttons button {
+  background-color: #FF7F50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.popup-buttons button:hover {
+  background-color: #e76b3c;
+}
+
+/* ------------for add response pop up box------------------ */
+  /* .add-response {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: white;
+  padding: 20px;
+  border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+  } */
+  
+/* --------------for delete pop up box----------------- */
+  /* .confirm-delete {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: white;
+    padding: 20px;
+  border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+  } */

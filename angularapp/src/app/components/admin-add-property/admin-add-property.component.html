@@ -1,0 +1,159 @@
+ <div class="container">
+    <form [formGroup]="propertyForm" (ngSubmit)="addProperty()" enctype="multipart/form-data">
+        <h1>Add New Property</h1>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" formControlName="title"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('title').touched && propertyForm.get('title').invalid">
+                    <div *ngIf="propertyForm.get('title').errors['required']">Title is required</div>
+                </div>
+                <!-- <div *ngIf="propertyAlreadyExists" >Duplicate Title</div> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" cols="30" rows="10" formControlName="description"></textarea>
+                <div class="alert error-message" *ngIf="propertyForm.get('description').touched && propertyForm.get('description').invalid">
+                    <div *ngIf="propertyForm.get('description').errors['required']">Description is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" name="location" id="location" formControlName="location"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('location').touched && propertyForm.get('location').invalid">
+                    <div *ngIf="propertyForm.get('location').errors['required']">Location is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="price" formControlName="price"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('price').touched && propertyForm.get('price').invalid">
+                    <div *ngIf="propertyForm.get('price').errors['required']">Price is required</div>
+                    <div *ngIf="propertyForm.get('price').errors['min']">Price Cannot be Negative</div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select name="type" id="type" formControlName="type">
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+                <div class="alert error-message" *ngIf="propertyForm.get('type').touched && propertyForm.get('type').invalid">
+                    <div *ngIf="propertyForm.get('type').errors['required']">Type is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select name="status" id="status" formControlName="status">
+                    <option value="available">Available</option>
+                    <option value="sold">Sold</option>
+                </select>
+                <div class="alert error-message" *ngIf="propertyForm.get('status').touched && propertyForm.get('status').invalid">
+                    <div *ngIf="propertyForm.get('status').errors['required']">Status is required</div>
+                </div>
+            </div>
+
+            <h3 style="color: #FF7F50; margin-top: 20px;">Home Ammenities:</h3>
+
+            <div class="form-group">
+                <label for="area">Enter Area(in sqft):</label>
+                <input type="text" name="area" id="area" formControlName="area"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('area').touched && propertyForm.get('area').invalid">
+                    <div *ngIf="propertyForm.get('area').errors['required']">Area is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="hallCount">Enter Number of Halls:</label>
+                <input type="number" name="hallCount" id="hallCount" formControlName="hallCount"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('hallCount').touched && propertyForm.get('hallCount').invalid">
+                    <div *ngIf="propertyForm.get('hallCount').errors['required']">hallCount is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="bedroomCount"> Enter Number of Bedrooms:</label>
+                <input type="number" name="bedroomCount" id="bedroomCount" formControlName="bedroomCount"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('bedroomCount').touched && propertyForm.get('bedroomCount').invalid">
+                    <div *ngIf="propertyForm.get('bedroomCount').errors['required']">bedroomCount is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="kitchenCount"> Enter Number of kitchens:</label>
+                <input type="number" name="kitchenCount" id="kitchenCount" formControlName="kitchenCount"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('kitchenCount').touched && propertyForm.get('kitchenCount').invalid">
+                    <div *ngIf="propertyForm.get('kitchenCount').errors['required']">kitchenCount is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="washroomCount"> Enter Number of washrooms:</label>
+                <input type="number" name="washroomCount" id="washroomCount" formControlName="washroomCount"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('washroomCount').touched && propertyForm.get('washroomCount').invalid">
+                    <div *ngIf="propertyForm.get('washroomCount').errors['required']">washroomCount is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="balconyCount"> Enter Number of balcony's:</label>
+                <input type="number" name="balconyCount" id="balconyCount" formControlName="balconyCount"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('balconyCount').touched && propertyForm.get('balconyCount').invalid">
+                    <div *ngIf="propertyForm.get('balconyCount').errors['required']">balconyCount is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="parkingArea">Enter Area For parkingArea:</label>
+                <input type="text" name="parkingArea" id="parkingArea" formControlName="parkingArea"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('parkingArea').touched && propertyForm.get('parkingArea').invalid">
+                    <div *ngIf="propertyForm.get('parkingArea').errors['required']">parkingArea is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="hosptialDistance">Enter Distance Of Nearest Hosptial:</label>
+                <input type="number" name="hosptialDistance" id="hosptialDistance" formControlName="hosptialDistance"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('hosptialDistance').touched && propertyForm.get('hosptialDistance').invalid">
+                    <div *ngIf="propertyForm.get('hosptialDistance').errors['required']">hosptialDistance is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="airportDistance">Enter Distance Of Nearest airport:</label>
+                <input type="number" name="airportDistance" id="airportDistance" formControlName="airportDistance"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('airportDistance').touched && propertyForm.get('airportDistance').invalid">
+                    <div *ngIf="propertyForm.get('airportDistance').errors['required']">airportDistance is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="railwayStationDistance">Enter Distance Of Nearest railwayStation:</label>
+                <input type="number" name="railwayStationDistance" id="railwayStationDistance" formControlName="railwayStationDistance"  >
+                <div class="alert error-message" *ngIf="propertyForm.get('railwayStationDistance').touched && propertyForm.get('railwayStationDistance').invalid">
+                    <div *ngIf="propertyForm.get('railwayStationDistance').errors['required']">railwayStationDistance is required</div>
+                </div>
+            </div> 
+
+
+         
+            <div class="form-group">
+                <label for="images">Upload Images:</label>
+                <input type="file" id="images" (change)="onImageSelect($event)" multiple />
+            </div>
+          
+            <button class="btn btn-primary" type="submit">ADD PROPERTY</button>
+            <div *ngIf="submitted">
+                <p *ngIf="propertyForm.valid">Property Added Successfully!</p>
+                <p *ngIf="propertyForm.invalid">Failed to add Property.</p>
+    
+                <button class="btn btn-primary" routerLink="/admin/viewProp" >CLOSE</button>
+
+            </div>
+    </form>
+</div> 

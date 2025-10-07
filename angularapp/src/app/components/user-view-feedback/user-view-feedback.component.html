@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="heading">
+        <h2>My Feedback</h2>
+    </div>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Property</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let feedback of feedbacks">
+                    <td>{{feedback.feedbackId}}</td>
+                    <td>{{feedback.feedbackText}}</td>
+                    <td>{{feedback.date}}</td>
+                    <td>{{feedback.category}}</td>
+                    <td>{{feedback.property.propertyId}}</td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

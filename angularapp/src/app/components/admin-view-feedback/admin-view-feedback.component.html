@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="heading">
+        <h2>Feedback</h2>
+        <!-- <div class="filterClass">
+            <h5>Filter by Category: </h5>
+            <select name="" id="">
+                <option value="">All Category</option>
+            </select>
+        </div> -->
+    </div>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Feedback</th>
+                    <th>Posted Date</th>
+                    <th>Property Name</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="feedbacks.length>0">
+                <tr *ngFor="let feedback of displayFeedbacks">
+                    <td>{{feedback.userId}}</td>
+                    <td>{{feedback.feedback}}</td>
+                    <td>{{feedback.postedDate}}</td>
+                    <td>{{feedback.propertyName}}</td>
+                </tr>
+            </tbody>
+            <div *ngIf="noDataAvailable">No Feedbacks Found</div>
+        </table>
+    </div>
+</div>

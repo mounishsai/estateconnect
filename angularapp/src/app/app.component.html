@@ -1,0 +1,6 @@
+<app-navbar *ngIf="!LoggedIn"></app-navbar>
+<app-adminnav *ngIf="LoggedIn && Role == 'admin'"></app-adminnav>
+<app-usernav *ngIf="LoggedIn && Role == 'user'"></app-usernav>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+

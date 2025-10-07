@@ -1,0 +1,56 @@
+.inquiries-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inquiries-container h2 {
+  text-align: center;
+  color: #FF7F50;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.no-data {
+  color: #999999;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  border: 1px dashed #FF7F50;
+  border-radius: 8px;
+  background-color: #fff5f0;
+}
+
+.inquiries-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.inquiries-table th,
+.inquiries-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: #000000;
+}
+
+.inquiries-table th {
+  background-color: #FF7F50;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.inquiries-table tr:hover {
+  background-color: #fff0e6;
+}
+
+.inquiries-table td:last-child {
+  font-style: italic;
+  color: #555555;
+}
+
+  

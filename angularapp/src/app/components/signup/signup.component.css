@@ -1,0 +1,139 @@
+body{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: slideDown 0.6s ease-out;
+}
+
+.heading h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF7F50;
+    font-size: 28px;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    margin-bottom: 20px;
+}
+
+.group input,
+.group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.group input:focus,
+.group select:focus {
+    border-color: #FF7F50;
+    outline: none;
+}
+
+.group input::placeholder {
+    color: #aaa;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+button{
+    background-color: #FF7F50;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E6735C;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: green;
+  }
+  
+  .popup-box {
+    background-color: white;
+    border: 2px solid #FF7F50;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .popup-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #FF7F50;
+  }
+
+  .popup-box input{
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .popup-buttons button {
+    background-color: #FF7F50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #FF7F50;
+    cursor: pointer;
+  }
+  

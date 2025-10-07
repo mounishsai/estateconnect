@@ -1,0 +1,70 @@
+<div style="position: relative; height: 125vh; overflow: hidden;">
+    <img src="/assets/images/login.jpg" 
+         alt="Background" 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.8;" />
+    <div class="container">
+        <div class="heading">
+            <h2>Signup</h2>
+        </div>
+        <div class="content">
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <div class="group">
+                    <input type="text" name="username" id="username" placeholder="Username" formControlName="username" />
+                    <div class="error-message" *ngIf="username.touched && username?.hasError('required')">Username is required</div>
+                    <div class="error-message" *ngIf="username?.hasError('minlength')">Username must be atleast 5 characters long</div>
+                    <div class="error-message" *ngIf="username?.hasError('maxlength')">Username cannot be more than 15 characters long</div>
+                </div>
+                <div class="group">
+                    <input type="text" name="email" id="email" placeholder="Email" formControlName="email" />
+                    <div class="error-message" *ngIf="email.touched && email?.hasError('required')">Email is required</div>
+                    <div class="error-message" *ngIf="email?.hasError('pattern')">Invalid email format</div>
+                </div>
+                <div class="group">
+                    <input type="text" name="mobile" id="mobile" placeholder="Mobile Number" formControlName="mobile" />
+                    <div class="error-message" *ngIf="mobile.touched && mobile?.hasError('required')">Mobile Number is required</div>
+                    <div class="error-message" *ngIf="mobile?.hasError('pattern')">Invalid mobile number</div>
+                </div>
+                <div class="group">
+                    <input type="password" name="password" id="password" placeholder="Password" formControlName="password" />
+                    <div class="error-message" *ngIf="password.touched && password?.hasError('required')">Password is required</div>
+                    <div class="error-message" *ngIf="password?.hasError('pattern')">Password must contain at least one uppercase, one lowercase, one number, one special character, and be at least 8 characters long.</div>
+                </div>
+                <div class="group">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword" />
+                    <div class="error-message" *ngIf="confirmPassword.touched && confirmPassword?.hasError('required')">Confirm Password is required</div>
+                    <div class="error-message" *ngIf="passwordMismatch">Password and Confirm password must be same</div>
+                </div>
+                <div class="group">
+                    <select name="role" id="role" formControlName="role" (change)="onRoleSelect()">
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <div class="error-message" *ngIf="role.touched && role?.hasError('required')">Role is required</div>
+                </div>
+
+                <div class="group" *ngIf="isAdmin">
+                    <input type="password" name="passkey" id="passkey" formControlName="passkey" placeholder="Enter Admin Passkey"/>
+                    <div class="error-message" *ngIf="passkey.touched && passkey?.hasError('required')">Passkey is required.</div>
+                </div>
+
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+        <div class="popup-overlay" *ngIf="otpBox">
+            <div class="popup-box" >
+                <h4>Enter Otp:</h4>
+                <input type="text" name="otp" id="otp" [(ngModel)]="receivedOtp" placeholder="Enter 6 digit otp sent to your mail id"/><br>
+                <button (click)="verify()" style="background-color: green; margin-right: 20px;">Verify</button>
+                <button (click)="cancel()" style="background-color: red;">Cancel</button>
+            </div>
+        </div>
+        <div class="popup-overlay" *ngIf="errorMessage!=''">
+            <div class="popup-box" >
+                <div class="error-message" style="margin-bottom: 20px;"><h3>{{errorMessage}}</h3></div><br>
+                <button (click)="login()" style="background-color: red; font-size: 16px; margin: 2px;" *ngIf="errorMessage=='Email already exists.'">Login</button>
+                <button (click)="cancel()" style="background-color: red;" *ngIf="errorMessage=='Please fill the form first' || errorMessage=='Invalid Passkey'">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

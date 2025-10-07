@@ -1,0 +1,141 @@
+nav {
+  background-color: #ffffff; 
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #FF7F50;
+}
+
+nav .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 3D shadow effect */
+  transform: translateY(-2px) scale(1.05); /* slight lift and scale */
+}
+
+nav .title:hover {
+  cursor: pointer;
+  color: #6b480a;
+}
+
+nav .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+nav .buttons button {
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+nav .buttons button:first-child {
+  border: 2px solid #FF7F50;
+  color: #FF7F50;
+}
+
+nav .buttons button.logout {
+  background-color: #FF7F50;
+  color: #ffffff;
+  border: 2px solid #FF7F50;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav .buttons button:hover:not(.logout) {
+  background-color: #E6735C;
+  color: #ffffff;
+}
+
+h2 {
+  color: #FF7F50;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+#delete {
+  background-color: #FF7F50;
+  color: white;
+  border-radius: 5px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+
+p {
+  color: #000000;
+  font-size: 16px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: green;
+}
+
+/* Popup box */
+.popup-box {
+  background-color: white;
+  border: 2px solid #FF7F50;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #FF7F50;
+}
+
+/* Popup buttons */
+.popup-buttons button {
+  background-color: #FF7F50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.popup-buttons button:hover {
+  background-color: #FF7F50;
+  cursor: pointer;
+}
+

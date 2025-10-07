@@ -1,0 +1,106 @@
+<!-- <div class="container">
+    <h1>Explore Properties</h1>
+    <div class="card-container">
+      <div class="form-group" *ngFor="let v of uViewProp">
+        <h2>{{v.title}}</h2>
+        <p>{{v.description}}</p>
+        <p>Location: {{v.location}}</p>
+        <p>Price: {{v.price}}</p>
+        <p>Type: {{v.type}}</p>
+        <p>Status: {{v.status}}</p>
+        <button [routerLink]="['/user/addInquiry', v.propertyId]" >Inquire</button>
+            </div>
+    </div>
+    
+</div> -->
+
+<!-- ---------------------------------------IDHI CAROUSEL DEMO----------------------------------- -->
+<!-- <div class="container">
+  <h1>Explore Properties</h1>
+  <div class="card-container">
+    <div class="form-group" *ngFor="let v of uViewProp">
+      <h2>{{v.title}}</h2>
+
+      <div class="carousel">
+        <div class="carousel-images" [style.transform]="'translateX(-' + v.currentIndex * 100 + '%)'">
+          <img *ngFor="let img of v.imageNames" [src]="'assets/uploads/' + img" alt="Property Image" />
+        </div>
+        <button class="carousel-btn left" (click)="prevImage(v)">‹</button>
+        <button class="carousel-btn right" (click)="nextImage(v)">›</button>
+      </div>
+
+      <p>{{v.description}}</p>
+      <p>Location: {{v.location}}</p>
+      <p>Price: {{v.price}}</p>
+      <p>Type: {{v.type}}</p>
+      <p>Status: {{v.status}}</p>
+      <button [routerLink]="['/user/addInquiry', v.propertyId]">Inquire</button>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <div class="container">
+  <h1>Explore Properties</h1>
+  <div class="form-group">
+    <label for="searchby">Search by:</label>
+    <input type="text" id="searchby" [(ngModel)]="searchProp" (input)="searchBy()">
+  
+    <label for="filtyp">Filter by Type:</label>
+    <select id="filtyp" [(ngModel)]="filtyp" (change)="filterByTyp()">
+      <option value="alltypes">All Types</option>
+      <option value="residential">Residential</option>
+      <option value="commercial">Commercial</option>
+    </select>
+  </div> -->
+
+  <div class="container">
+    <h1>Explore Properties</h1>
+    <div class="form-group">
+      <div class="input-group">
+        <label for="searchby">Search by:</label>
+        <input type="text" id="searchby" [(ngModel)]="searchProp" (input)="searchAndFilterProperties()">
+        <!-- <label for="priceRange">Filter by Price:</label>
+        <p>{{minPrice}}</p>
+        <input type="range" id="priceRange" [(ngModel)]="selectedPrice" [min]="minPrice" [max]="maxPrice" (input)="filterProperties()"/>
+        <p>{{maxPrice}}</p> -->
+      </div>
+      <div class="input-group">
+        <label for="filtyp">Filter by Type:</label>
+        <select id="filtyp" [(ngModel)]="filtyp" (change)="searchAndFilterProperties()">
+          <option value="alltypes">All Types</option>
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="prop-list">
+    <div class="prop-card" *ngFor="let prop of displayProperties" (click)="details(prop.propertyId)">
+      <div class="image-container">
+        <img [src]="'../../../assets/uploads/' + prop.images[0]" alt="{{prop.title}}" width="300" height="200" />
+      </div>
+      <div class="prop-content">
+        <h2>{{prop.title}}</h2>
+        <p>Location: {{prop.location}}</p>
+        <p>Price: {{prop.price}}</p>
+      </div>
+    </div>
+  </div> -->
+  <div class="prop-list">
+    <div *ngFor="let prop of displayProperties" class="prop-card" (click)="details(prop.propertyId)">
+      <div class="image-container">
+        <img [src]="'../../../assets/uploads/' + prop.images[0]" alt="Img" class="prop-image" />
+      </div>
+      <div class="prop-content">
+        <div><strong>{{ prop.title }}   <span style="margin-left: 50px;">₹{{prop.price}}</span></strong></div>
+        <div>{{prop.location}}</div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+
+
+
+

@@ -1,0 +1,42 @@
+<div class="inquiries-container">
+  <h2>Your Inquiries</h2>
+
+  <div *ngIf="userInquiries.length === 0" class="no-data">
+    No Data Found
+  </div>
+
+  <table *ngIf="userInquiries.length > 0" class="inquiries-table">
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Message</th>
+        <!-- <th>Priority</th> -->
+        <th>Status</th>
+        <th>Admin Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inquiry of userInquiries">
+        <td [textContent]="inquiry.property.title ? inquiry.property.title : 'N/A'" ></td>
+        <td>{{ inquiry.message }}</td> 
+        <!-- <td>{{ inquiry.priority }}</td> -->
+        <!-- <td>{{ inquiry.status }}</td> -->
+        <td [ngStyle]="{
+          'color': inquiry.status === 'Pending' ? '#FFA500' : 'green',
+          'font-weight': 'bold'
+        }">
+          {{ inquiry.status }}
+        </td>
+        <td [ngStyle]="{
+           'font-weight': 'bold'
+        }"
+         [textContent]="inquiry.adminResponse ? inquiry.adminResponse : 'No response yet'">  
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+ 
+
+

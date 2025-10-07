@@ -1,0 +1,88 @@
+ <div class="container">
+    <!-- <img class="bg-image" src="https://img.freepik.com/free-photo/urban-city-architecture_649448-5343.jpg?t=st=1756184355~exp=1756187955~hmac=f0a8c211e064e24e8356aeaa92ef838c3f7265fa6d88f9b42a683e093cb68e17&w=1480" alt="homepage"> -->
+    <div class="carousel-images">
+      <img class="bg-image" [src]="'../../../assets/images/' + bgImage" alt="homepage">
+    </div>
+    
+    <div class="sub-container">
+        <div class="heading">
+            <h3>Welcome to EstateConnect</h3>
+        </div>
+        <hr class="colored-line">
+        <p>
+            Discover your dream home or manage your property inquires with EstateConnect. Our platform 
+            connects you with the top-tier residential and commercial properties while ensuring a smooth 
+            and hassle-free experience.
+        </p>
+    </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" name="search" id="search" [(ngModel)]="searchItem" onclick="search()" placeholder="Search Properties by Location" />
+            <button (click)="search()">→</button>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card" (click)="cardNavigate(1)">
+          <!-- <img src="discover.png" alt="Discover Properties Icon" /> -->
+          <h3>Discover Suitable Properties</h3>
+          <p>Find the perfect home from a wide range of properties tailored to your needs.</p>
+        </div>
+        <div class="card" (click)="cardNavigate(2)">
+          <!-- <img src="agents.png" alt="Find Agents Icon" /> -->
+          <h3>Find Trusted Agents</h3>
+          <p>Connect with verified real estate agents to guide you through your property journey.</p>
+        </div>
+        <div class="card" (click)="cardNavigate(3)">
+          <!-- <img src="buyers.png" alt="Connect Buyers Icon" /> -->
+          <h3>Connect with Genuine Buyers</h3>
+          <p>Reach out to serious buyers and make your property selling experience smoother.</p>
+        </div>
+        <div class="card" (click)="cardNavigate(4)">
+          <!-- <img src="alerts.png" alt="Property Alerts Icon" /> -->
+          <h3>Get Property Alerts</h3>
+          <p>Stay updated with instant alerts on new listings and price changes.</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" *ngIf="displayPopUp">
+        <div class="popup-box" >
+            <h3>Hey! Are you searching for a property? <br> Well, you are at the right place</h3>
+            <h4 style="color:green;">Signup to get the best deals for you</h4>
+            <div class="popup-buttons">
+                <button (click)="signup()">Signup</button>
+                <button (click)="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+
+   
+</div>
+<app-location-cards></app-location-cards>
+<app-blog-cards></app-blog-cards>
+<app-why-us></app-why-us>
+
+<!--
+<hr class="colored-line">
+<div *ngIf="showAboutUs" class="sub-container-2 button-container">
+         <button class="btn btn-primary" (click)="aboutUs()" >About Us</button>
+</div>
+
+
+<hr class="colored-line">
+<div *ngIf="showContactUs" class="sub-container-3 button-container">
+         <button class="btn btn-primary" (click)="contactUs()" >Contact Us</button>
+</div> -->
+
+<!-- About Us Button -->
+<!-- <div *ngIf="showAboutUsButton" @fadeOut class="sub-container-2 button-container">
+    <button class="btn btn-primary" (click)="aboutUs()">About Us</button>
+  </div>
+  
+  <div *ngIf="showContactUsButton" @fadeOut class="sub-container-3 button-container">
+    <button class="btn btn-primary" (click)="contactUs()">Contact Us</button>
+  </div>
+   -->
+

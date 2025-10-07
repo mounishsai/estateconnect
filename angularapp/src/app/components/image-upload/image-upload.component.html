@@ -1,0 +1,9 @@
+<div>
+    <h2>Upload Image</h2>
+    <input type="file" (change)="onFileSelected($event)" />
+    <input type="text" [(ngModel)]="imageData.title" placeholder="Title" />
+    <input type="text" [(ngModel)]="imageData.uploadedBy" placeholder="Uploaded By" />
+    <input type="date" [(ngModel)]="imageData.uploadDate" />
+    <button (click)="onUpload()">Upload</button>
+  </div>
+  
